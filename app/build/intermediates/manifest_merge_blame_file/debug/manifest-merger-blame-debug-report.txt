@@ -1,0 +1,509 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 * Copyright (C) 2009 The Sipdroid Open Source Project
+4 * 
+5 * This file is part of Sipdroid (http://www.sipdroid.org)
+6 * 
+7 * Sipdroid is free software; you can redistribute it and/or modify
+8 * it under the terms of the GNU General Public License as published by
+9 * the Free Software Foundation; either version 3 of the License, or
+10 * (at your option) any later version.
+11 * 
+12 * This source code is distributed in the hope that it will be useful,
+13 * but WITHOUT ANY WARRANTY; without even the implied warranty of
+14 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+15 * GNU General Public License for more details.
+16 * 
+17 * You should have received a copy of the GNU General Public License
+18 * along with this source code; if not, write to the Free Software
+19 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+20/////////////////////////////////////////////////////////////////////
+21// these are the main definitions of Sipdroid
+22// for modifying them additional terms according to section 7, GPL apply
+23// see ADDITIONAL_TERMS.txt
+24/////////////////////////////////////////////////////////////////////
+25-->
+26<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+27    package="org.sipdroid.sipua"
+28    android:installLocation="auto"
+29    android:versionCode="123"
+30    android:versionName="5.3 beta" >
+31    <!--
+32	<permission android:name="org.sipdroid.sipua.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+33	<uses-permission android:name="org.sipdroid.sipua.permission.C2D_MESSAGE" />
+34	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+35    -->
+36    <uses-sdk
+37        android:minSdkVersion="11"
+37-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml
+38        android:targetSdkVersion="28" />
+38-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml
+39
+40    <supports-screens
+40-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:32:2-36:40
+41        android:anyDensity="false"
+41-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:36:11-37
+42        android:largeScreens="true"
+42-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:35:11-38
+43        android:normalScreens="true"
+43-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:33:11-39
+44        android:smallScreens="true" />
+44-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:34:11-38
+45
+46    <uses-feature
+46-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:37:2-84
+47        android:name="android.hardware.bluetooth"
+47-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:37:16-57
+48        android:required="false" />
+48-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:37:58-82
+49    <uses-feature
+49-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:38:2-83
+50        android:name="android.hardware.location"
+50-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:38:16-56
+51        android:required="false" />
+51-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:38:57-81
+52    <uses-feature
+52-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:39:2-87
+53        android:name="android.hardware.location.gps"
+53-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:39:16-60
+54        android:required="false" />
+54-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:39:61-85
+55    <uses-feature
+55-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:40:2-84
+56        android:name="android.hardware.telephony"
+56-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:40:16-57
+57        android:required="false" />
+57-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:40:58-82
+58    <uses-feature
+58-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:41:2-86
+59        android:name="android.hardware.touchscreen"
+59-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:41:16-59
+60        android:required="false" />
+60-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:41:60-84
+61    <uses-feature
+61-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:42:2-79
+62        android:name="android.hardware.wifi"
+62-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:42:16-52
+63        android:required="false" />
+63-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:42:53-77
+64    <uses-feature
+64-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:43:2-81
+65        android:name="android.hardware.camera"
+65-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:43:16-54
+66        android:required="false" />
+66-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:43:55-79
+67
+68    <uses-permission android:name="android.permission.INTERNET" />
+68-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:152:2-80
+68-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:152:19-61
+69    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+69-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:153:2-93
+69-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:153:19-74
+70    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+70-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:154:2-84
+70-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:154:19-65
+71    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+71-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:155:2-94
+71-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:155:19-75
+72    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+72-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:156:2-86
+72-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:156:19-67
+73    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+73-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:157:2-88
+73-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:157:19-69
+74    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+74-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:158:2-89
+74-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:158:19-70
+75    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+75-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:159:2-94
+75-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:159:19-75
+76    <uses-permission android:name="android.permission.READ_CONTACTS" />
+76-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:160:2-85
+76-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:160:19-66
+77    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+77-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:161:2-86
+77-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:161:19-67
+78    <uses-permission android:name="android.permission.CALL_PHONE" />
+78-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:162:2-82
+78-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:162:19-63
+79    <uses-permission android:name="android.permission.WAKE_LOCK" />
+79-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:163:2-81
+79-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:163:19-62
+80    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+80-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:164:2-88
+80-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:164:19-69
+81    <uses-permission android:name="android.permission.CAMERA" />
+81-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:165:2-78
+81-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:165:19-59
+82    <uses-permission android:name="android.permission.VIBRATE" />
+82-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:166:2-80
+82-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:166:19-60
+83    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+83-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:167:2-93
+83-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:167:19-73
+84    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+84-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:168:2-90
+84-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:168:19-70
+85    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+85-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:169:2-95
+85-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:169:19-75
+86    <uses-permission android:name="android.permission.BLUETOOTH" />
+86-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:170:2-82
+86-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:170:19-62
+87    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+87-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:171:2-85
+87-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:171:19-65
+88    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+88-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:172:2-89
+88-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:172:19-69
+89    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+89-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:173:2-85
+89-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:173:19-66
+90    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+90-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:174:2-86
+90-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:174:19-67
+91    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+91-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:175:2-92
+91-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:175:19-73
+92    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+92-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:176:2-98
+92-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:176:19-79
+93    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+93-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:177:2-108
+93-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:177:19-89
+94    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+94-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:178:2-90
+94-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:178:19-71
+95
+96    <application
+96-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:44:2-151:19
+97        android:debuggable="true"
+98        android:icon="@drawable/icon64"
+98-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:44:15-46
+99        android:label="@string/app_name"
+99-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:44:47-79
+100        android:testOnly="true"
+101        android:theme="@android:style/Theme.Holo" >
+101-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:44:80-121
+102        <activity
+102-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:45:9-51:20
+103            android:name="org.sipdroid.sipua.ui.Sipdroid"
+103-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:45:19-64
+104            android:configChanges="orientation|keyboardHidden"
+104-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:46:10-60
+105            android:label="@string/app_name"
+105-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:45:65-97
+106            android:launchMode="singleInstance" >
+106-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:45:98-133
+107            <intent-filter>
+107-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:47:13-50:29
+108                <action android:name="android.intent.action.MAIN" />
+108-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:48:17-69
+108-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:48:25-66
+109
+110                <category android:name="android.intent.category.LAUNCHER" />
+110-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:49:17-77
+110-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:49:27-74
+111            </intent-filter>
+112        </activity>
+113        <activity
+113-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:52:9-60:20
+114            android:name="org.sipdroid.sipua.ui.PSTN"
+114-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:52:19-60
+115            android:icon="@drawable/ic_launcher_phone"
+115-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:53:10-52
+116            android:label="@string/pstn_name" >
+116-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:52:61-94
+117            <intent-filter>
+117-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:54:13-59:29
+118                <action android:name="android.intent.action.SENDTO" />
+118-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:55:17-71
+118-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:55:25-68
+119
+120                <category android:name="android.intent.category.DEFAULT" />
+120-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:17-76
+120-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:27-73
+121
+122                <data android:scheme="sms" />
+122-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+122-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+123                <data android:scheme="smsto" />
+123-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+123-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+124            </intent-filter>
+125        </activity>
+126        <activity
+126-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:61:9-68:20
+127            android:name="org.sipdroid.sipua.ui.SIP"
+127-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:61:19-59
+128            android:label="@string/app_name" >
+128-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:61:60-92
+129            <intent-filter>
+129-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:54:13-59:29
+130                <action android:name="android.intent.action.SENDTO" />
+130-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:55:17-71
+130-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:55:25-68
+131
+132                <category android:name="android.intent.category.DEFAULT" />
+132-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:17-76
+132-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:27-73
+133
+134                <data android:scheme="sms" />
+134-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+134-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+135                <data android:scheme="smsto" />
+135-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+135-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+136            </intent-filter>
+137        </activity>
+138        <activity
+138-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:69:9-101
+139            android:name="org.sipdroid.sipua.ui.AutoAnswer"
+139-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:69:19-66
+140            android:label="@string/app_name" />
+140-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:69:67-99
+141        <activity
+141-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:70:9-104
+142            android:name="org.sipdroid.sipua.ui.ChangeAccount"
+142-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:70:19-69
+143            android:label="@string/app_name" />
+143-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:70:70-102
+144        <activity
+144-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:71:9-97:20
+145            android:name="org.sipdroid.sipua.ui.SIPUri"
+145-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:71:19-62
+146            android:label="@string/app_name"
+146-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:71:63-95
+147            android:theme="@android:style/Theme.Dialog" >
+147-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:72:11-54
+148            <intent-filter>
+148-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:73:13-78:29
+149                <action android:name="android.intent.action.CALL" />
+149-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:74:17-69
+149-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:74:25-66
+150
+151                <category android:name="android.intent.category.DEFAULT" />
+151-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:17-76
+151-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:27-73
+152
+153                <data android:scheme="sip" />
+153-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+153-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+154                <data android:scheme="sipdroid" />
+154-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+154-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+155            </intent-filter>
+156            <intent-filter>
+156-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:79:13-86:29
+157                <action android:name="android.intent.action.SENDTO" />
+157-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:55:17-71
+157-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:55:25-68
+158                <action android:name="android.intent.action.VIEW" />
+158-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:81:17-69
+158-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:81:25-66
+159
+160                <category android:name="android.intent.category.DEFAULT" />
+160-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:17-76
+160-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:27-73
+161                <category android:name="android.intent.category.BROWSABLE" />
+161-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:83:17-78
+161-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:83:27-75
+162
+163                <data android:scheme="imto" />
+163-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+163-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+164                <data android:scheme="sip" />
+164-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+164-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+165            </intent-filter>
+166            <intent-filter>
+166-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:87:13-91:29
+167                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+167-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:88:17-80
+167-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:88:25-77
+168
+169                <category android:name="android.intent.category.DEFAULT" />
+169-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:17-76
+169-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:27-73
+170
+171                <data android:scheme="sip" />
+171-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+171-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+172            </intent-filter>
+173            <intent-filter>
+173-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:92:13-96:20
+174                <action android:name="android.intent.action.VIEW" />
+174-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:81:17-69
+174-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:81:25-66
+175
+176                <category android:name="android.intent.category.DEFAULT" />
+176-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:17-76
+176-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:56:27-73
+177
+178                <data android:mimeType="vnd.android.cursor.item/name" />
+178-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+178-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:95:14-61
+179            </intent-filter>
+180        </activity>
+181        <activity
+181-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:98:9-99:69
+182            android:name="org.sipdroid.sipua.ui.Activity2"
+182-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:98:19-65
+183            android:excludeFromRecents="true"
+183-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:99:10-43
+184            android:label="@string/app_name"
+184-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:98:66-98
+185            android:taskAffinity="" />
+185-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:99:44-67
+186        <activity
+186-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:100:9-103:20
+187            android:name="org.sipdroid.sipua.ui.Settings"
+187-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:100:19-64
+188            android:configChanges="orientation|keyboardHidden"
+188-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:101:10-60
+189            android:excludeFromRecents="true"
+189-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:102:10-43
+190            android:label="@string/app_name"
+190-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:100:65-97
+191            android:taskAffinity="" >
+191-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:102:44-67
+192        </activity>
+193        <activity
+193-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:104:9-107:20
+194            android:name="org.sipdroid.codecs.Codecs$CodecSettings"
+194-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:105:5-60
+195            android:label="@string/app_name" >
+195-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:106:5-37
+196        </activity>
+197        <!--
+198        <activity android:name="org.sipdroid.sipua.ui.VideoCamera" android:label="@string/menu_video"
+199	        android:excludeFromRecents="true" android:taskAffinity=""
+200			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+201	        android:screenOrientation="landscape"
+202	        android:clearTaskOnLaunch="true"
+203	        android:configChanges="orientation|keyboardHidden">
+204        </activity>
+205        -->
+206        <activity
+206-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:117:9-120:20
+207            android:name="org.sipdroid.sipua.ui.InCallScreen"
+207-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:117:19-68
+208            android:excludeFromRecents="true"
+208-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:118:10-43
+209            android:label="@string/app_name"
+209-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:117:69-101
+210            android:launchMode="singleInstance"
+210-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:119:10-45
+211            android:showWhenLocked="true"
+211-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:119:46-75
+212            android:taskAffinity="" >
+212-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:118:44-67
+213        </activity>
+214
+215        <receiver
+215-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:121:6-82
+216            android:name="org.sipdroid.sipua.ui.OneShotAlarm"
+216-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:121:16-47
+217            android:label="@string/app_name" />
+217-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:121:48-80
+218        <receiver
+218-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:122:6-83
+219            android:name="org.sipdroid.sipua.ui.OneShotAlarm2"
+219-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:122:16-48
+220            android:label="@string/app_name" />
+220-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:122:49-81
+221        <receiver
+221-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:123:6-79
+222            android:name="org.sipdroid.sipua.ui.LoopAlarm"
+222-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:123:16-44
+223            android:label="@string/app_name" />
+223-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:123:45-77
+224        <receiver
+224-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:124:6-77
+225            android:name="org.sipdroid.sipua.ui.OwnWifi"
+225-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:124:16-42
+226            android:label="@string/app_name" />
+226-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:124:43-75
+227        <receiver
+227-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:125:6-85
+228            android:name="org.sipdroid.sipua.ui.OneShotLocation"
+228-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:125:16-50
+229            android:label="@string/app_name" />
+229-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:125:51-83
+230        <receiver
+230-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:126:6-82
+231            android:name="org.sipdroid.sipua.ui.LoopLocation"
+231-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:126:16-47
+232            android:label="@string/app_name" />
+232-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:126:48-80
+233        <receiver
+233-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:127:6-131:17
+234            android:name="org.sipdroid.sipua.ui.Caller"
+234-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:127:16-41
+235            android:label="@string/app_name" >
+235-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:127:42-74
+236            <intent-filter android:priority="-1" >
+236-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:128:10-130:26
+236-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:128:25-46
+237                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+237-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:129:11-76
+237-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:129:19-73
+238            </intent-filter>
+239        </receiver>
+240        <receiver
+240-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:132:9-143:17
+241            android:name="org.sipdroid.sipua.ui.Receiver"
+241-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:132:19-46
+242            android:enabled="true"
+242-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:132:47-69
+243            android:label="@string/app_name" >
+243-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:132:70-102
+244            <intent-filter>
+244-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:133:9-137:25
+245                <action android:name="android.intent.action.BOOT_COMPLETED" />
+245-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:134:11-73
+245-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:134:19-70
+246                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+246-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:135:11-90
+246-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:135:19-87
+247                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE" />
+247-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:136:11-92
+247-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:136:19-89
+248            </intent-filter>
+249            <intent-filter>
+249-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:138:9-142:25
+250                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+250-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:139:11-75
+250-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:139:19-72
+251
+252                <data android:scheme="package" />
+252-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+252-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:23-43
+253                <data android:path="org.sipdroid.sipua" />
+253-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:57:17-46
+253-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:141:17-50
+254            </intent-filter>
+255        </receiver>
+256        <receiver android:name="org.sipdroid.sipua.ui.PhoneStart" >
+256-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:144:9-149:20
+256-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:144:19-66
+257            <intent-filter>
+257-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:145:13-148:29
+258                <action android:name="org.sipdroid.START_SIPDROID" />
+258-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:146:17-70
+258-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:146:25-67
+259                <action android:name="org.sipdroid.STOP_SIPDROID" />
+259-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:147:17-69
+259-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:147:25-66
+260            </intent-filter>
+261        </receiver>
+262
+263        <service
+263-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:150:9-87
+264            android:name="org.sipdroid.sipua.ui.RegisterService"
+264-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:150:18-52
+265            android:label="@string/app_name" />
+265-->/media/mkrnaqeebi/Share/java/sipdroid1/app/src/main/AndroidManifest.xml:150:53-85
+266    </application>
+267
+268</manifest>

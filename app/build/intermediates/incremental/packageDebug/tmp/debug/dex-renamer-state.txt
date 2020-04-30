@@ -1,0 +1,4 @@
+#Tue Apr 28 15:55:18 PKT 2020
+base.0=/media/mkrnaqeebi/Share/java/sipdroid1/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
